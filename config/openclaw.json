@@ -1,0 +1,120 @@
+{
+  "agents": {
+    "defaults": {
+      "maxConcurrent": 4,
+      "subagents": {
+        "maxConcurrent": 8
+      },
+      "compaction": {
+        "mode": "safeguard"
+      },
+      "workspace": "~/.openclaw/workspace/crowdclaw/agents/coordinator",
+      "models": {
+        "kimi-coding/k2p5": {
+          "alias": "Kimi K2.5"
+        }
+      },
+      "model": {
+        "primary": "kimi-coding/k2p5"
+      }
+    },
+    "list": [
+      {
+        "id": "coordinator",
+        "default": true,
+        "workspace": "~/.openclaw/workspace/crowdclaw/agents/coordinator",
+        "agentDir": "~/.openclaw/agents/coordinator/agent"
+      },
+      {
+        "id": "researcher",
+        "workspace": "~/.openclaw/workspace/crowdclaw/agents/researcher",
+        "agentDir": "~/.openclaw/agents/researcher/agent"
+      },
+      {
+        "id": "creative",
+        "workspace": "~/.openclaw/workspace/crowdclaw/agents/creative",
+        "agentDir": "~/.openclaw/agents/creative/agent"
+      },
+      {
+        "id": "coder",
+        "workspace": "~/.openclaw/workspace/crowdclaw/agents/coder",
+        "agentDir": "~/.openclaw/agents/coder/agent",
+        "tools": {
+          "allow": ["read", "write", "edit", "exec", "sessions_spawn", "web_search", "web_fetch"],
+          "deny": ["browser", "canvas", "nodes"]
+        }
+      }
+    ]
+  },
+  "bindings": [
+    {
+      "agentId": "coordinator",
+      "match": {
+        "channel": "webchat"
+      }
+    }
+  ],
+  "tools": {
+    "agentToAgent": {
+      "enabled": false,
+      "allow": ["coordinator", "researcher", "creative", "coder"]
+    }
+  },
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "token"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "calendar.add",
+        "contacts.add",
+        "reminders.add"
+      ]
+    }
+  },
+  "auth": {
+    "profiles": {
+      "kimi-coding:default": {
+        "provider": "kimi-coding",
+        "mode": "api_key"
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    },
+    "load": {
+      "extraDirs": ["~/.openclaw/skills"],
+      "watch": true
+    }
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true
+  }
+}
