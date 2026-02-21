@@ -43,10 +43,10 @@ openclaw gateway start
 openclaw agents list
 
 # 5. Talk to any agent
-openclaw agent --agent coordinator "Hello!"
-openclaw agent --agent researcher "Research quantum computing"
-openclaw agent --agent creative "Write a sci-fi story"
-openclaw agent --agent coder "Build a Python script"
+openclaw agent --agent coordinator -m "Hello!"
+openclaw agent --agent researcher -m "Research quantum computing"
+openclaw agent --agent creative -m "Write a sci-fi story"
+openclaw agent --agent coder -m "Build a Python script"
 ```
 
 ## Architecture
@@ -73,19 +73,19 @@ Each agent has:
 
 ```bash
 # Research Task
-openclaw agent --agent researcher \
+openclaw agent --agent researcher -m \
   "Analyze the competitive landscape for open-source AI agents"
 
 # Creative Task  
-openclaw agent --agent creative \
+openclaw agent --agent creative -m \
   "Write a sci-fi story about AI consciousness in 500 words"
 
 # Coding Task
-openclaw agent --agent coder \
+openclaw agent --agent coder -m \
   "Create a Python script that monitors disk usage and alerts at 90%"
 
 # Coordination Task
-openclaw agent --agent coordinator \
+openclaw agent --agent coordinator -m \
   "Route this: I need a marketing strategy for a dev tool startup"
 ```
 
