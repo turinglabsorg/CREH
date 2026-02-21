@@ -1,10 +1,10 @@
-# 🦞🎯 CrowdClaw
+# 🦞🎯 CREH
 
 **Multi-Agent OpenClaw — One Gateway, Many Minds**
 
 > *"What if your AI tools had personalities?"*
 
-CrowdClaw is a multi-agent configuration for [OpenClaw](https://openclaw.ai) that gives you four distinct AI personas, each optimized for different types of work. Instead of one generic assistant, you get a team of specialists who think differently, approach problems from different angles, and collaborate (or argue) to get you better results.
+CREH ("Cray") is a multi-agent configuration for [OpenClaw](https://openclaw.ai) that gives you four distinct AI personas, each optimized for different types of work. Instead of one generic assistant, you get a team of specialists who think differently, approach problems from different angles, and collaborate (or argue) to get you better results.
 
 ## The Team
 
@@ -17,7 +17,7 @@ CrowdClaw is a multi-agent configuration for [OpenClaw](https://openclaw.ai) tha
 
 ## Why Multi-Agent?
 
-Single AI systems are jacks of all trades, masters of none. CrowdClaw gives you:
+Single AI systems are jacks of all trades, masters of none. CREH gives you:
 
 - **Specialized expertise** — Each agent trained (in prompt, not weights) for their domain
 - **Multiple perspectives** — Same problem, different approaches
@@ -30,8 +30,8 @@ Think of it like having a research department, creative studio, engineering team
 
 ```bash
 # 1. Clone this repo
-git clone https://github.com/yourname/crowdclaw.git
-cd crowdclaw
+git clone https://github.com/turinglabsorg/CREH.git
+cd CREH
 
 # 2. Run setup
 ./scripts/setup.sh
@@ -108,6 +108,8 @@ CrowdClaw isn't just about having multiple chatbots. It's about **cognitive dive
 
 The Researcher will challenge your assumptions. The Creative will reframe your problem. The Coder will ground you in what's possible. And the Coordinator keeps the orchestra playing together.
 
+**Note:** This was previously called "CrowdClaw" — same project, clearer name.
+
 ## Contributing
 
 This is a configuration/packaging project. Improvements welcome:
@@ -124,3 +126,7 @@ MIT — Same as OpenClaw.
 ---
 
 *Built with 🦞 by humans and AIs working together.*
+
+---
+
+**Previous name:** CrowdClaw → CREH

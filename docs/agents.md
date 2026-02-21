@@ -1,6 +1,6 @@
 # Agent Personalities
 
-CrowdClaw's power comes from cognitive diversity — each agent approaches problems differently. Understanding how they think helps you route tasks effectively.
+CREH's power comes from cognitive diversity — each agent approaches problems differently. Understanding how they think helps you route tasks effectively.
 
 ## 🎯 Coordinator
 

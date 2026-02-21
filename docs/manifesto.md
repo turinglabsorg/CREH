@@ -1,4 +1,4 @@
-# The CrowdClaw Manifesto
+# The CREH Manifesto
 
 ## We Believe
 
@@ -16,7 +16,7 @@ When the Researcher says "wait, that's not proven" and the Creative says "but im
 
 **4. Tools should have voices.**
 
-Your IDE doesn't just compile code; it has opinions about style. Your search engine doesn't just find links; it has assumptions about relevance. CrowdClaw makes those voices explicit, distinct, choosable.
+Your IDE doesn't just compile code; it has opinions about style. Your search engine doesn't just find links; it has assumptions about relevance. CREH makes those voices explicit, distinct, choosable.
 
 **5. The future is multi-agent.**
 
@@ -26,7 +26,7 @@ Not because it's technically impressive. Because it's *cognitively accurate*. Hu
 
 ## What This Is
 
-CrowdClaw is an experiment in **cognitive architecture** — how multiple minds can share a body (the Gateway) while maintaining distinct identities.
+CREH is an experiment in **cognitive architecture** — how multiple minds can share a body (the Gateway) while maintaining distinct identities.
 
 It's not about having more chatbots. It's about having *better thinking* — thinking that's been filtered through skepticism, enriched by creativity, grounded in pragmatism, and orchestrated with clarity.
 
@@ -46,6 +46,6 @@ Try it. Talk to the Researcher about something you think you understand. Ask the
 
 See what emerges when different minds work on the same problem.
 
-**That's CrowdClaw.**
+**That's CREH.**
 
 🦞🎯
