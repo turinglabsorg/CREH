@@ -23,7 +23,10 @@
         "id": "coordinator",
         "default": true,
         "workspace": "~/.openclaw/workspace/crowdclaw/agents/coordinator",
-        "agentDir": "~/.openclaw/agents/coordinator/agent"
+        "agentDir": "~/.openclaw/agents/coordinator/agent",
+        "subagents": {
+          "allowAgents": ["*"]
+        }
       },
       {
         "id": "researcher",
@@ -56,7 +59,7 @@
   ],
   "tools": {
     "agentToAgent": {
-      "enabled": false,
+      "enabled": true,
       "allow": ["coordinator", "researcher", "creative", "coder"]
     }
   },
