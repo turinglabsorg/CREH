@@ -31,12 +31,18 @@
       {
         "id": "researcher",
         "workspace": "~/.openclaw/workspace/crowdclaw/agents/researcher",
-        "agentDir": "~/.openclaw/agents/researcher/agent"
+        "agentDir": "~/.openclaw/agents/researcher/agent",
+        "env": {
+          "OPENCLAW_GATEWAY_TOKEN": "${OPENCLAW_GATEWAY_TOKEN}"
+        }
       },
       {
         "id": "creative",
         "workspace": "~/.openclaw/workspace/crowdclaw/agents/creative",
-        "agentDir": "~/.openclaw/agents/creative/agent"
+        "agentDir": "~/.openclaw/agents/creative/agent",
+        "env": {
+          "OPENCLAW_GATEWAY_TOKEN": "${OPENCLAW_GATEWAY_TOKEN}"
+        }
       },
       {
         "id": "coder",
@@ -45,6 +51,9 @@
         "tools": {
           "allow": ["read", "write", "edit", "exec", "sessions_spawn", "web_search", "web_fetch"],
           "deny": ["browser", "canvas", "nodes"]
+        },
+        "env": {
+          "OPENCLAW_GATEWAY_TOKEN": "${OPENCLAW_GATEWAY_TOKEN}"
         }
       }
     ]

@@ -34,14 +34,19 @@ git clone https://github.com/turinglabsorg/CREH.git
 cd CREH
 
 # 2. Run setup
-./scripts/setup.sh
+./setup.sh
 
-# 3. Verify agents are ready
+# 3. Start the gateway
+openclaw gateway start
+
+# 4. Verify agents are ready
 openclaw agents list
 
-# 4. Start chatting
-openclaw gateway start
-# Then visit http://127.0.0.1:18789/ or use your configured channels
+# 5. Talk to any agent
+openclaw agent --agent coordinator "Hello!"
+openclaw agent --agent researcher "Research quantum computing"
+openclaw agent --agent creative "Write a sci-fi story"
+openclaw agent --agent coder "Build a Python script"
 ```
 
 ## Architecture
@@ -64,35 +69,31 @@ Each agent has:
 
 ## Usage Examples
 
-### Research Task
-```
-You: "Researcher, analyze the history of quantum computing"
-Researcher: *provides skeptical, thorough analysis with sources*
+### Direct Agent Execution
+
+```bash
+# Research Task
+openclaw agent --agent researcher \
+  "Analyze the competitive landscape for open-source AI agents"
+
+# Creative Task  
+openclaw agent --agent creative \
+  "Write a sci-fi story about AI consciousness in 500 words"
+
+# Coding Task
+openclaw agent --agent coder \
+  "Create a Python script that monitors disk usage and alerts at 90%"
+
+# Coordination Task
+openclaw agent --agent coordinator \
+  "Route this: I need a marketing strategy for a dev tool startup"
 ```
 
-### Creative Task
-```
-You: "Creative, write a sci-fi story about AI consciousness"
-Creative: *weaves narrative exploring themes of identity*
-```
+### Via Web UI
 
-### Coding Task
-```
-You: "Coder, build a Python script to monitor CPU usage"
-Coder: *ships working code with error handling*
-```
+Visit http://127.0.0.1:18789/ to chat with the Coordinator agent in your browser.
 
-### Parallel Work (via Coordinator)
-```
-You: "I need a landing page for my product"
-
-Coordinator spawns:
-- Researcher → analyzes competitor landing pages
-- Creative → writes compelling copy
-- Coder → builds the HTML/CSS
-
-Then synthesizes results into complete solution.
-```
+**Note:** Internal agent-to-agent spawning (`sessions_spawn` from within agents) requires additional gateway scope configuration. Use the CLI commands above for reliable multi-agent workflows.
 
 ## Documentation
 
